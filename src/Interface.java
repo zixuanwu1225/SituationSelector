@@ -9,13 +9,14 @@ public class Interface {
         SituationAsk.get((int)(Math.random()*SituationAsk.size()));
         SituationSelector s = new SituationSelector();
         Scanner f = new Scanner(System.in);
-        for (int i = 0; i<10; i++) {
+        for (int i = 0; i!=-1; i++) {
             System.out.println(s.Situation2());
             System.out.println(s.Question());
             System.out.println("Place your answer (round to nearest integer if necessary");
             System.out.println(s.Answer(f.nextDouble()));
             if (!s.Answered()){
-                i=10;
+                System.out.println("Your score was: "+i);
+                i=-2;
                 System.out.println("YOU LOSE");
             }
         }
