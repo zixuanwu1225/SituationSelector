@@ -21,16 +21,8 @@ public class SituationSelector {
         //gets random thing in array Situations
         return Situations.get((int) (Math.random() * Situations.size()));
     }
-    public int pickOption(){
-        option = ((int)Math.random()*2)+1;
-        return option;
-    }
-    public String makeoption(){
-        //use to pick between Dice, Question, etc.
-        return "ij";
-    }
     public int Dice(){
-        diceValue = ((int)Math.random()*20)+1;
+        diceValue = ((int)(Math.random()*20))+1;
         return diceValue;
     }
     public String Question(){
