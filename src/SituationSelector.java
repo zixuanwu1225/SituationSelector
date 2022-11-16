@@ -8,6 +8,7 @@ public class SituationSelector {
     private String actualOperators = "";
     private double answer = 0;
     private int score = 0;
+    private int MiniBossNumber = 0;
     private int option = 0;
     DecimalFormat d = new DecimalFormat(".0");
 
@@ -15,11 +16,62 @@ public class SituationSelector {
             Arrays.asList("You see a strange array, that displays the following:","Your party encounters a pack of goblins")
         );
     //Situation 3 gets numbers from Array list
+    ArrayList<String>MiniBosses=new ArrayList<String>(
+            Arrays.asList("It is possible for atoms to be in two places at once","It is possible for light to go forwards and backwards in time at the same time","The closest black-hole to earth 1600 light years away",
+                    "The earth is flat","Pluto is larger than Earth's Moon")
+    );
 
     //Situation 2 gets what situation you are given
     public String Situation2(){
         //gets random thing in array Situations
         return Situations.get((int) (Math.random() * Situations.size()));
+    }
+    public String MiniBoss(){
+        MiniBossNumber =  ((int)(Math.random()*MiniBosses.size()));
+        return MiniBosses.get(MiniBossNumber);
+    }
+    public boolean MiniBossAnswer(String Answer){
+        if (MiniBossNumber==0){
+            if (Answer.equals("true")){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (MiniBossNumber==1){
+            if (Answer.equals("true")){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (MiniBossNumber==2){
+            if (Answer.equals("true")){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (MiniBossNumber==3){
+            if (Answer.equals("false")){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        if (MiniBossNumber==4){
+            if (Answer.equals("false")){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        return false;
     }
     public int Dice(){
         diceValue = ((int)(Math.random()*20))+1;
