@@ -1,16 +1,13 @@
-import java.text.DecimalFormat;
 import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Arrays;
 public class SituationSelector {
-    private int diceValue = 0;
-    private int operators = 0;
     private String actualOperators = "";
     private double answer = 0;
     private int score = 0;
     private int MiniBossNumber = 0;
-    private int option = 0;
-    DecimalFormat d = new DecimalFormat(".0");
+    private int values = 0;
+    private int secondValue = 0;
 
     ArrayList<String>Situations=new ArrayList<String>(
             Arrays.asList("You see a strange array, that displays the following:","Your party encounters a pack of goblins")
@@ -74,13 +71,16 @@ public class SituationSelector {
         return false;
     }
     public int Dice(){
-        diceValue = ((int)(Math.random()*20))+1;
+        int diceValue = ((int)(Math.random()*50))+1;
         return diceValue;
     }
+    public void ValueGetter(){
+        values = (int)(Math.random()*10)+1;
+        secondValue = (int)(Math.random()*10)+1;
+    }
     public String Question(){
-        operators = (int)(Math.random()*4)+1;
-        int values = (int)(Math.random()*10)+1;
-        int secondValue = (int)(Math.random()*10)+1;
+        ValueGetter();
+        int operators = (int)(Math.random()*4)+1;
         String theQuestion = "";
         if(operators == 4){
             actualOperators = "+";
@@ -127,7 +127,7 @@ public class SituationSelector {
         }
         else
             return "Your party got Indiana Jones'd except this time died";
-    }
+        }
     public boolean Answered(){
         if(score==1){
             return true;
