@@ -25,7 +25,7 @@ public class Interface {
             }
             if (modeSelector>10&&modeSelector!=-1){
                 System.out.println("___________________________________________________________________________");
-                System.out.println(s.Situation2());
+                System.out.println(s.getSituation());
                 System.out.println("You must answer the following question to beat your adversary");
                 System.out.println(s.Question());
                 System.out.println("Place your answer (round to nearest integer if necessary");
@@ -39,7 +39,7 @@ public class Interface {
             }
             else if (modeSelector<10&&modeSelector!=-1){
                 System.out.println("___________________________________________________________________________");
-                System.out.println(s.Situation2());
+                System.out.println(s.getSituation());
                 int dice = s.Dice();
                 if(dice>10){
                     System.out.println("It appears RNGsus is on your side");

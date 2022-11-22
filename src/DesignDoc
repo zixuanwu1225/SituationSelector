@@ -1,0 +1,22 @@
+This game named SituationSelector is a random situation selector to where the player is given a number of situations, and different obstacles for the player to face.
+
+Objects:
+SituationSelector
+Interface
+
+Constructors:
+SituationSelector
+
+Methods:
+getSituation-returns a set of situations player must face
+MiniBoss-returns special questions that are generally harder
+MiniBossAnswer-returns the answer of MiniBoss,has parameter Answer which is a true or false and will accept those two strings in order to get whether or not you move on or lose. If entered a string different from those two, will lose.
+Dice - returns random value from 1-20
+ValueGetter - returns random values and are called in different methods to be able to give the player situations and what "obstacle" they get such as random dice or a question
+Question - returns a question the player must answer
+Answer - returns right or wrong to the player when Question is answered, has parameter playerAnswer, which is used for the input by the player, of which will determine if you are right or wrong.
+Answered - what actually runs the operations for the Question to see whether or not you are correct.
+
+General algorithm for Main Method:
+The main method will run a random number generator to determine what situations one will receive such as dice or question, or a miniboss, of which will run a situation selector or miniboss to give you a situation of what happens and to give a game feel to it. It also has a score system which will be kept track and will be given when you lose. This game is infinite. It does not have an end. The term miniboss does imply that there is a final boss but that is used just so the player thinks there is one.
+

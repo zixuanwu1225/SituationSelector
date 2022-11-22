@@ -8,9 +8,10 @@ public class SituationSelector {
     private int MiniBossNumber = 0;
     private int values = 0;
     private int secondValue = 0;
+    private int SituationNumber  = 0;
 
     ArrayList<String>Situations=new ArrayList<String>(
-            Arrays.asList("You see a strange array, that displays the following:","Your party encounters a pack of goblins")
+            Arrays.asList("Your mom tells you to do the dishes","You realize your dad isn't coming home with the milk","You are about to drop your lunch D:","Your phone is on one percent","You are about to put the wrong password to your github account")
         );
     //Situation 3 gets numbers from Array list
     ArrayList<String>MiniBosses=new ArrayList<String>(
@@ -19,9 +20,10 @@ public class SituationSelector {
     );
 
     //Situation 2 gets what situation you are given
-    public String Situation2(){
+    public String getSituation(){
         //gets random thing in array Situations
-        return Situations.get((int) (Math.random() * Situations.size()));
+        SituationNumber =((int)(Math.random() * Situations.size()));
+        return Situations.get(SituationNumber);
     }
     public String MiniBoss(){
         MiniBossNumber =  ((int)(Math.random()*MiniBosses.size()));
@@ -126,7 +128,7 @@ public class SituationSelector {
             return "You passed.You move on to the next level.";
         }
         else
-            return "Your party got Indiana Jones'd except this time died";
+            return "I can't believe you've done this";
         }
     public boolean Answered(){
         if(score==1){
