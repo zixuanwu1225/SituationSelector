@@ -2,6 +2,7 @@ import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Arrays;
 public class SituationSelector {
+    private String COLOR_RED = "\u001B[31m";
     private String actualOperators = "";
     private double answer = 0;
     private int score = 0;
