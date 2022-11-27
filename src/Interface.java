@@ -3,7 +3,6 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 public class Interface {
-    private String COLOR_RED = "\u001B[31m";
     public static void main(String[] args) {
         String COLOR_RED = "\u001B[31m";
         String COLOR_WHITE = "\u001B[37m";
