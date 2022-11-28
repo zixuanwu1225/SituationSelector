@@ -74,7 +74,7 @@ public class SituationSelector {
         return false;
     }
     public int Dice(){
-        int diceValue = ((int)(Math.random()*50))+1;
+        int diceValue = ((int)(Math.random()*100))+1;
         return diceValue;
     }
     public void ValueGetter(){

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Interface {
     public static void main(String[] args) {
         String COLOR_RED = "\u001B[31m";
-        String COLOR_WHITE = "\u001B[37m";
+        String COLOR_WHITE = "\u001B[40m";
         System.out.println(COLOR_WHITE+"Hello Player....welcome to \"Situation Survivor\".");
         SituationSelector s = new SituationSelector();
         for (int i = 0; i!=-1; i++) {
@@ -25,12 +25,12 @@ public class Interface {
                 }
                 System.out.println(COLOR_WHITE+"___________________________________________________________________________");
             }
-            if (modeSelector>10&&modeSelector!=-1){
+            if (modeSelector>3&&modeSelector!=-1){
                 System.out.println("___________________________________________________________________________");
                 System.out.println(s.getSituation());
                 System.out.println("You must answer the following question to beat your adversary");
                 System.out.println(s.Question());
-                System.out.println("Place your answer (round to nearest integer if necessary");
+                System.out.println("Place your answer (round to nearest integer if necessary)");
                 System.out.println(s.Answer(f.nextDouble()));
                 if (!s.Answered()) {
                     System.out.println("Your score was: " + i);
@@ -39,11 +39,11 @@ public class Interface {
                 }
                 System.out.println(COLOR_WHITE+"___________________________________________________________________________");
             }
-            else if (modeSelector<10&&modeSelector!=-1){
+            else if (modeSelector<3&&modeSelector!=-1){
                 System.out.println("___________________________________________________________________________");
                 System.out.println(s.getSituation());
                 int dice = s.Dice();
-                if(dice>10){
+                if(dice>1){
                     System.out.println("It appears RNGsus is on your side");
                 }
                 else{
